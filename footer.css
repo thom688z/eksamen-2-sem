@@ -30,7 +30,7 @@ Body {
      grid-column-end: 3;
      grid-row-start: 1;
      grid-row-end: 3;
-     background-image: url(imgs/logo.png);
+     background-image: url(imgs/1x/logo.png);
      background-repeat: no-repeat;
      background-size: contain;
 }
