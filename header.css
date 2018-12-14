@@ -118,7 +118,7 @@ body.fixed .header-fixed .header-limiter nav {
           width: 60%;
           float: right;
           background-color: #666666;
-
+          opacity: 0.8;
      }
      .header-fixed .header-limiter .responsive .icon {
           position: absolute;
@@ -132,6 +132,7 @@ body.fixed .header-fixed .header-limiter nav {
           display: block;
           text-align: center;
           font-size: 0.8em;
+          opacity: 1;
 
 
      }
