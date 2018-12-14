@@ -1,6 +1,7 @@
-Body {
+body {
      margin: 0;
      padding: 0;
+     height: 1500px;
 }
 
 .site_info {
@@ -8,7 +9,7 @@ Body {
      background-color: #333333;
      width: 100%;
      position: fixed;
-     bottom: 10%;
+     bottom: 0;
      padding-bottom: 20px;
 
 
@@ -20,7 +21,6 @@ Body {
      grid-template-columns: repeat(5, 1fr);
      padding-top: 20px;
      padding-bottom: 20px;
-     max-width: 100%;
 }
 
 .grid-item1 {
@@ -112,7 +112,7 @@ a:hover {
      background-color: #2c2c2c;
      height: 10%;
      width: 100%;
-     position: fixed;
+     position: absolute;
      bottom: 0;
 }
 
@@ -122,11 +122,10 @@ a:hover {
      width: 100%;
      display: inline-block;
      text-align: center;
-     position: fixed;
+     position: absolute;
      bottom: 5px;
-
-
 }
+.icons a {}
 
 img {
      height: 100%;

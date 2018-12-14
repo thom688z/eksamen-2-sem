@@ -1,12 +1,10 @@
 body {
-     background-color: #000;
      margin: 0;
      padding: 0;
-     height: 1500px;
 }
 
-img {
-     height: 25%;
+.logoimg {
+     height: 10%;
      width: auto;
      position: absolute;
      top: 0;
