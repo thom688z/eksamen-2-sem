@@ -9,6 +9,7 @@ Body {
      width: 100%;
      position: fixed;
      bottom: 10%;
+     padding-bottom: 20px;
 
 
 }
@@ -17,38 +18,51 @@ Body {
      display: grid;
      grid-template-rows: 1fr 1fr;
      grid-template-columns: repeat(5, 1fr);
-     grid-gap: 5px;
+     padding-top: 20px;
+     padding-bottom: 20px;
+     max-width: 100%;
 }
 
 .grid-item1 {
      grid-column-start: 1;
      grid-column-end: 3;
+     align-self: start;
 }
 
 .grid-item2 {
      grid-column-start: 3;
      grid-column-end: 3;
      grid-row-start: 1;
-     grid-row-end: 3;
-     background-image: url(imgs/1x/logo.png);
+     grid-row-end: 1;
+     background-image: url(imgs/1x/2orange-logo.png);
      background-repeat: no-repeat;
      background-size: contain;
+     max-width: 80%;
+     min-width: 120px;
+     position: relative;
+     top: 50px;
+     left: 3%;
+
+
 }
 
 .grid-item3 {
      grid-column-start: 4;
      grid-column-end: 6;
+     align-self: start;
 }
 
 .grid-item4 {
-     grid-column-start: 2;
-     grid-column-end: 3;
-     align-content: end;
+     grid-column-start: 1;
+     grid-column-end: 4;
+     align-self: start;
+
 }
 
 .grid-item5 {
      grid-column-start: 4;
-     grid-column-end: 5;
+     grid-column-end: 6;
+     align-self: start;
 }
 
 h3 {
@@ -67,7 +81,14 @@ h4 {
      line-height: 0.7;
 }
 
-a {
+.grid-item5 a {
+     text-decoration: none;
+     color: #525252;
+     display: block;
+     line-height: 1em;
+}
+
+.grid-item4 a {
      text-decoration: none;
      color: #525252;
      display: block;
@@ -75,6 +96,12 @@ a {
 }
 
 a:active {
+     text-decoration: none;
+     color: #d86621;
+
+}
+
+a:hover {
      text-decoration: none;
      color: #d86621;
 
@@ -93,11 +120,11 @@ a:active {
 
 .icons {
      width: 100%;
-     display: block;
+     display: inline-block;
      text-align: center;
      position: fixed;
      bottom: 5px;
-     ;
+
 
 }
 
@@ -105,4 +132,5 @@ img {
      height: 100%;
      width: 30px;
      margin-left: 1%;
+     opacity: 0.5;
 }
