@@ -5,11 +5,12 @@ body {
 }
 
 .logoimg {
+     display: block;
      height: 10%;
      width: auto;
      position: absolute;
-     top: 0;
-     left: 0;
+     top: 2%;
+     left: 2%;
 }
 
 .header-fixed {
@@ -32,6 +33,7 @@ body {
      position: absolute;
      top: 2%;
 
+
 }
 
 .header-fixed-placeholder {
@@ -49,6 +51,7 @@ body {
 
 
 .header-fixed .header-limiter a {
+
      color: #ffffff;
      text-decoration: none;
 
@@ -63,8 +66,8 @@ body {
 }
 
 .header-fixed .header-limiter nav a {
-     display: inline-block;
-     padding-right: 3%;
+     padding-right: 1%;
+     padding-left: 1%;
      text-decoration: none;
      color: #ffffff;
      opacity: 0.9;
