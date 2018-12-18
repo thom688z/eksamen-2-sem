@@ -9,7 +9,6 @@
      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
      <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-     <link rel="stylesheet">
      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
 
 
@@ -17,14 +16,37 @@
 </head>
 
 <body>
+     <!-- OVERLAY TESTER -->
+     <!-- The overlay -->
+     <div id="myNav" class="overlay">
+
+          <!-- Button to close the overlay navigation -->
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+          <!-- Overlay content -->
+          <div class="overlay-content">
+               <a href="#">Hjem</a>
+               <a href="#">Shop</a>
+               <a href="#">Om</a>
+               <a href="#">Levering</a>
+               <a href="#">Finansering</a>
+               <a href="#">Kontakt</a>
+          </div>
+     </div>
+
+     <!-- Use any element to open/show the overlay navigation menu -->
+
+     <!-- <span onclick="openNav()">open</span>
+     -->
+
+     <!-- OVERLAY TESTER SLUT -->
+
 
      <header class="header-fixed">
 
-          <img class="logoimg" src="imgs/1x/2orange-logo.png">
+          <img class="logoimg" src="imgs/1x/2orange-logo.png" alt="logo">
 
           <div class="header-limiter">
-
-
                <nav class="topnav" id="myTopnav">
                     <a href="#">Hjem</a>
                     <a href="#">Shop</a>
@@ -32,29 +54,22 @@
                     <a href="#">Levering</a>
                     <a href="#">Finansering</a>
                     <a href="#">Kontakt</a>
-                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <span onclick="openNav()"><i class="fa fa-bars"></i></span>
+
+                    <!--    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                          <i class="fa fa-bars"></i></a>
+                         -->
                </nav>
           </div>
-
-
-          <form class="example">
-               <button type="submit"><i class="fa fa-search"></i></button>
-               <input type="text" placeholder="Søg..." name="search">
-
-          </form>
-
-
      </header>
 
      <script>
-          function myFunction() {
-               var x = document.getElementById("myTopnav");
-               if (x.className === "topnav") {
-                    x.className += " responsive";
-               } else {
-                    x.className = "topnav";
-               }
+          function openNav() {
+               document.getElementById("myNav").style.width = "100%";
+          }
+
+          function closeNav() {
+               document.getElementById("myNav").style.width = "0%";
           }
 
      </script>
