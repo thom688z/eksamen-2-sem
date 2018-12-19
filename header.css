@@ -1,7 +1,6 @@
 body {
      margin: 0;
      padding: 0;
-     background-color: dimgrey;
 }
 
 .logoimg {
@@ -31,7 +30,7 @@ body {
      text-align: center;
      margin: 0 auto;
      position: absolute;
-     top: 2%;
+     top: 4%;
 
 
 }
@@ -76,12 +75,6 @@ body {
 .header-fixed .header-limiter nav a:hover {
      opacity: 1;
      color: #d86621
-}
-
-.header-fixed .header-limiter nav a.selected {
-     color: #608bd2;
-     pointer-events: none;
-     opacity: 1;
 }
 
 body.fixed .header-fixed {
@@ -178,7 +171,7 @@ body.fixed .header-fixed .header-limiter nav {
 
 .overlay a:hover,
 .overlay a:focus {
-     color: #f1f1f1;
+     color: #d86621;
 }
 
 .overlay .closebtn {
@@ -200,7 +193,14 @@ body.fixed .header-fixed .header-limiter nav {
 }
 
 span {
+     color: #818181;
+     float: right;
+     width: 10%;
      display: none;
+}
+
+span:hover {
+     color: #d86621;
 }
 
 @media screen and (max-width: 685px) {
@@ -209,6 +209,7 @@ span {
           text-align: right;
           margin-right: 4%;
           font-size: 1.5em;
+          cursor: pointer;
 
      }
 }
