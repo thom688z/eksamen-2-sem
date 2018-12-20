@@ -1,0 +1,94 @@
+Listview kode:  <!DOCTYPE html>
+<html lang="da">
+
+<head>
+     <meta charset="UTF-8">
+     <script src="pwabuilder-sw-register.js"></script>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Produkter</title>
+     <link rel="stylesheet" href="style.css">
+     <link rel="shortcut icon" href="favicon.ico" />
+     <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+
+
+     <style>
+          .subcat {
+               display: none;
+          }
+     </style>
+</head>
+
+<body>
+
+     <div class="maincontainer">
+          <header>
+               <div class="logo">
+                    <h1>Her er de skønne produkter</h1>
+               </div>
+
+          </header>
+          <div id="container">
+
+
+          </div>
+
+          <template data-template>
+            <article id="produktcontainer">
+
+               <img class="data-img">
+               <h2 class="data-titel"></h2>
+               <p class="data-maal"></p>
+               <p class="data-pris"></p>
+
+            </article>
+        </template>
+
+     </div>
+
+
+
+
+     <script>
+          let produktObjekt;
+          let produkter;
+          let produkt;
+          let postTemplate = document.querySelector("[data-template]");
+          dest = document.querySelector("#container");
+
+
+          async function getJson() {
+               produktObjekt = await fetch("http://www.kroghport.dk/wordpress/wp-json/wp/v2/produkt");
+               produkter = await produktObjekt.json();
+               console.log("produkter");
+               visRinge();
+
+          }
+
+          function visRinge() {
+               console.log("visRinge");
+
+               produkter.forEach(produkt => {
+                    let klon = postTemplate.cloneNode(true).content;
+
+                    klon.querySelector(".data-img").setAttribute("src", produkt.acf.billede);
+                    klon.querySelector(".data-titel").textContent = produkt.title.rendered;
+                    klon.querySelector(".data-maal").textContent = produkt.acf.maal;
+                    klon.querySelector(".data-pris").textContent = produkt.acf.pris;
+
+                    dest.appendChild(klon);
+
+
+
+               });
+
+
+          }
+
+
+          //læs script når DOM er hentet
+          document.addEventListener("DOMContentLoaded", getJson);
+     </script>
+</body>
+
+</html>
