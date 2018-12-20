@@ -8,7 +8,7 @@ body {
 }
 
 #vid-splash {
-     max-width: 100%;
+     width: 100%;
      height: auto;
 }
 
@@ -37,8 +37,8 @@ body {
      padding-right: 10%;
      margin-top: -300px;
      background-color: #fff;
-     padding-top: 10%;
-     padding-bottom: 10%;
+     padding-top: 15%;
+     padding-bottom: 15%;
      z-index: 1;
 }
 
@@ -53,7 +53,7 @@ body {
      grid-row-start: 1;
      background-color: #fff;
      margin-top: -300px;
-     padding-top: 15%;
+     padding-top: 30%;
      z-index: 1;
 }
 
@@ -85,7 +85,7 @@ body {
      position: absolute;
      right: 0;
      top: 50;
-     max-width: 100%;
+     width: 100%;
      z-index: -100;
      opacity: 0.8;
 
@@ -129,18 +129,21 @@ body {
 }
 
 .grid-item-4 {
-     background-color: burlywood;
      display: grid;
      grid-column-start: 1;
      grid-column-end: 5;
      padding-left: 10%;
      padding-right: 10%;
-     padding-bottom: 15%;
+     padding-bottom: 5%;
      margin-top: 10%;
+     text-align: center;
+     background-color: beige;
 }
 
 #proc-h1 {
      text-align: center;
+     grid-column-start: 2;
+     padding-bottom: 10%;
 }
 
 .grid-item-5 {
