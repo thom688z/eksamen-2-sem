@@ -15,14 +15,17 @@
                $("#include_header").load("header.html");
                $("#include_footer").load("footer.html");
                $("#include_slideshow").load("slideshow.html");
+               $("#include_tilmelding").load("tilmelding.html");
           });
      </script>
 </head>
 
 <body>
-     <div class="splash-img">
-          <img src="/imgs/splash_04.png">
-     </div>
+
+     <video autoplay loop id="vid-splash" muted plays-inline>
+  <source src="imgs/splash_video.mp4" type="video/mp4">
+</video>
+
      <div class="overlay_tekst">
           <h1 class="headline">
                Mwide møbler
@@ -39,22 +42,25 @@
           </div>
           <br>
           <div class="grid-item-2">
-               <img src="imgs/line_shot_1.png" alt="Os">
+               <img src="imgs/line_shot_1.png" alt="Line&Wilma">
           </div>
+
           <div class="grid-item-3">
-               <video autoplay loop id="video-background" muted plays-inline>
-  <source src="imgs/splash_video.mp4" type="video/mp4">
-</video>
+
+               <img id="grid-3-bg" src="imgs/splash_03.png" alt="mikkel">
+
                <h1>Hvordan kan vi hjælpe dig?</h1>
                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris </p>
 
                <button class="kontakt-but">Kontakt os</button>
                <button class="udvalg-but">Se udvalg</button>
+
           </div>
+
+
           <div class="grid-item-4">
-               <img class="grafik" src="imgs/grafik_01.png">
-               <h1>
-                    Step by step
+               <h1 id="proc-h1">
+                    Processen
                </h1>
                <div class="grid-item-5">
 
@@ -82,20 +88,19 @@
                <h1>Kreativitet. Kvalitet.</h1>
                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
 
+               <button class="udvalg-but">Se udvalg</button>
 
-               <div id="include_slideshow"></div>
+               <div></div>
           </div>
-          <div class="grid-item-10">
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem </p>
-               <div class="grid-item-11">
-                    <img src="imgs/video+film/_DSC0023.JPG">
+
+
+          <div class="grid-item-11">
+               <div class="grid-cont-11-1">
+                    <div id="include_tilmelding"></div>
                </div>
           </div>
-
-
-
-
      </div>
+
      <div id="include_footer"></div>
 </body>
 

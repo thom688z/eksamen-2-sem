@@ -7,10 +7,9 @@ body {
      max-width: 100%;
 }
 
-.splash-img img {
-     width: 100%;
+#vid-splash {
+     max-width: 100%;
      height: auto;
-
 }
 
 .overlay_tekst h1 {
@@ -29,19 +28,18 @@ body {
      display: grid;
      grid-template-columns: 1fr 1fr;
      grid-template-rows: auto;
-
-
 }
 
 .grid-item-1 {
      grid-column-start: 1;
      grid-column-end: 4;
-     padding-left: 60px;
-     padding-right: 60px;
-     align-self: start;
-     margin-top: -200px;
+     padding-left: 30%;
+     padding-right: 10%;
+     margin-top: -300px;
+     background-color: #fff;
+     padding-top: 10%;
      padding-bottom: 10%;
-     max-height: 500px;
+     z-index: 1;
 }
 
 .grid-item-1 h1 {
@@ -53,11 +51,14 @@ body {
      grid-column-start: 4;
      grid-column-end: 5;
      grid-row-start: 1;
-     margin-top: -100px;
+     background-color: #fff;
+     margin-top: -300px;
+     padding-top: 15%;
+     z-index: 1;
 }
 
 .grid-item-2 img {
-     padding-right: 60px;
+     padding-right: 80px;
      width: 450px;
 }
 
@@ -69,28 +70,30 @@ body {
      text-align: center;
      height: 100%;
      padding-bottom: 20%;
+     color: white;
+
 
 }
 
 .grid-item-3 h1 {
-     padding-top: 20%;
-
+     padding-top: 30%;
+     color: white;
 }
 
-#video-background {
-     vertical-align: middle;
+
+#grid-3-bg {
      position: absolute;
      right: 0;
      top: 50;
      max-width: 100%;
      z-index: -100;
-     opacity: 0.5;
+     opacity: 0.8;
 
 }
 
 
 .kontakt-but {
-     background-color: #ddd;
+     background-color: #fff;
      border: none;
      color: black;
      padding: 10px 20px;
@@ -109,7 +112,7 @@ body {
 
 
 .udvalg-but {
-     background-color: #ddd;
+     background-color: #fff;
      border: none;
      color: black;
      padding: 10px 20px;
@@ -126,26 +129,21 @@ body {
 }
 
 .grid-item-4 {
+     background-color: burlywood;
      display: grid;
      grid-column-start: 1;
      grid-column-end: 5;
-     padding-left: 60px;
-     padding-right: 60px;
+     padding-left: 10%;
+     padding-right: 10%;
      padding-bottom: 15%;
+     margin-top: 10%;
 }
 
-.grafik {
-     position: absolute;
-     left: 0;
-     width: 100%;
-     z-index: -99;
-     height: 450px;
-
+#proc-h1 {
+     text-align: center;
 }
 
 .grid-item-5 {
-
-     background-color: green;
      grid-column-start: 1;
      grid-column-end: 2;
      padding-left: 10%;
@@ -165,7 +163,7 @@ body {
 }
 
 .grid-item-6 {
-     background-color: palevioletred;
+
      grid-column-start: 2;
      grid-column-end: 3;
      padding-left: 10%;
@@ -173,7 +171,7 @@ body {
 }
 
 .grid-item-7 {
-     background-color: mediumseagreen;
+
      grid-column-start: 3;
      grid-column-end: 4;
      padding-left: 10%;
@@ -182,8 +180,6 @@ body {
 
 .grid-item-8 {
      display: grid;
-     width: 100%;
-     background-color: orange;
      grid-column-start: 1;
      grid-column-end: 5;
      padding-left: 10%;
@@ -194,12 +190,10 @@ body {
 
 .grid-item-9 {
      display: grid;
-     background-color: cornflowerblue;
      grid-column-start: 1;
 }
 
 .grid-item-10 {
-     background-color: rebeccapurple;
      grid-column-start: 1;
      grid-column-end: 5;
      padding-left: 10%;
@@ -207,15 +201,30 @@ body {
 }
 
 .grid-item-11 {
-     background-color: mediumvioletred;
-     grid-column-start: 4;
+     grid-column-start: 1;
      grid-column-end: 6;
+     background-color: #d86621;
+
+}
+
+.grid-cont-11-1 {
+     display: grid;
+     grid-template-columns: auto;
      padding-left: 10%;
      padding-right: 10%;
 }
 
-.grid-item-11 img {
-     max-height: 250px;
+.til-grid-1 {
+     padding-top: 4%;
+     text-align: center;
+}
+
+.til-grid-2 {
+     margin-top: -15px;
+     text-align: center;
+     padding-bottom: 2%;
+     color: #fff;
+
 }
 
 @media only screen and (max-width: 800px) {

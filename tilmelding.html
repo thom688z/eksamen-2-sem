@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="DA">
+
+<head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Nyhedsbrev</title>
+     <link rel="stylesheet" href="tilmelding.css">
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</head>
+
+
+<body>
+     <form class="til-container">
+
+          <div class="til-grid-1">
+               <input type="textE" placeholder="Email" name="email" required>
+
+               <button type="submit" class="til-btn">Tilmeld</button>
+
+          </div>
+     </form>
+     <div class="til-grid-2">
+          <p>Få nyheder, anbefalinger, særlige konkurrencer og tilbud ved at tilmelde dig vores nyhedsbrev.
+               <br>Det udkommer ca. 1 gang om måneden - Du kan altid framelde dig igen. </p>
+     </div>
+
+     <script>
+          let svartekst = "";
+          document.querySelector("form").addEventListener("submit", ajaxCall);
+          async function ajaxCall(e) {
+               e.preventDefault();
+               let email = this.querySelector("input[type=text]").value;
+               let url = "formtest1.php?name=" + email;
+               let svar = await fetch(url);
+               svartekst = await svar.text();
+               show();
+               this.querySelector("input[type=text]").value = "";
+          }
+
+          function show(response) {
+               document.querySelector("#response").textContent = svartekst;
+          }
+
+     </script>
+</body>
+
+</html>

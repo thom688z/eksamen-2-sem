@@ -5,11 +5,11 @@ body {
 
 .logoimg {
      display: block;
-     height: 10%;
+     height: 13%;
      width: auto;
      position: absolute;
      top: 2%;
-     left: 2%;
+     left: 10%;
 }
 
 .header-fixed {
