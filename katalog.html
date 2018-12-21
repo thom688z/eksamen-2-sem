@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="DA">
+<head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>MWIDE</title>
+     <link rel="stylesheet" href="kat-style.css">
+     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <meta name="robots" content="noindex">
+
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+     </script>
+
+     <script>
+          $(function() {
+               $("#include_header").load("header.html");
+               $("#include_footer").load("footer.html");
+
+          });
+     </script>
+</head>
+
+
+<body>
+
+   <div class="kat-splash"></div>
+
+   <div id="include_header"></div>
+
+    <div id="modal">
+
+        <div id="modal-content">
+
+
+            <img class="modal-billede" src="" alt="">
+
+            <p class="modal-varenummer"></p>
+
+            <p class="modal-titel"></p>
+
+            <p class="modal-pris"></p>
+
+            <p class="modal-maal"></p>
+
+            <p class="modal-vaegt"></p>
+
+            <p class="modal-detaljer"></p>
+
+            <p class="modal-serie"></p>
+
+            <p class="modal-kategori"></p>
+
+            <p class="modal-underkategori"></p>
+
+
+            <button>X</button>
+
+
+        </div>
+
+    </div>
+
+
+    <nav>
+
+        <button class="menu-item" data-filter="alle">Alle produkter</button>
+
+        <button class="menu-item" data-filter="borde_stole">Borde og stole</button>
+
+        <button class="menu-item" data-filter="lamper">Lamper</button>
+
+        <button class="menu-item" data-filter="opbevaring">Opbevaring</button>
+
+        <button class="menu-item" data-filter="bolig_tilbehor">Boligtilbehør</button>
+
+    </nav>
+
+
+    <div class="maincontainer">
+        <header>
+            <div class="logo">
+                <h1>Produkter</h1>
+            </div>
+
+        </header>
+        <div id="container">
+
+
+        </div>
+
+        <template data-template>
+            <article id="produktcontainer">
+
+               <img class="data-img">
+               <h2 class="data-titel"></h2>
+               <p class="data-maal"></p>
+               <p class="data-pris"></p>
+
+            </article>
+        </template>
+
+    </div>
+
+<div id="include_footer"></div>
+
+    <script>
+        let produktObjekt;
+        let produkter;
+        let produkt;
+        let postTemplate = document.querySelector("[data-template]");
+        let filter = "alle";
+        let dest = document.querySelector("#container");
+
+
+        async function getJson() {
+            produktObjekt = await fetch("http://www.kroghport.dk/wordpress/wp-json/wp/v2/produkt?per_page=100");
+            produkter = await produktObjekt.json();
+            console.log("produkter");
+            visProdukter();
+
+        }
+
+        function visProdukter() {
+            console.log("visProdukter");
+
+            produkter.forEach(produkt => {
+                console.log(produkt.acf.kategori)
+                if (produkt.acf.kategori == filter || filter == "alle") {
+
+
+                    let klon = postTemplate.cloneNode(true).content;
+
+                    klon.querySelector(".data-img").setAttribute("src", produkt.acf.billede);
+                    klon.querySelector(".data-img").addEventListener("click", () => {
+
+                        visModal(produkt);
+
+                    });
+                    klon.querySelector(".data-img").setAttribute("src", produkt.acf.billede);
+                    klon.querySelector(".data-titel").textContent = produkt.title.rendered;
+                    klon.querySelector(".data-maal").textContent = produkt.acf.maal;
+                    klon.querySelector(".data-pris").textContent = produkt.acf.pris;
+
+
+                    dest.appendChild(klon);
+
+                }
+
+            });
+
+        }
+
+        document.querySelectorAll(".menu-item").forEach(knap => {
+
+            knap.addEventListener("click", mfilter)
+
+        });
+
+
+
+        function mfilter() {
+
+            dest.textContent = "";
+
+            filter = this.getAttribute("data-filter");
+
+            visProdukter();
+
+        }
+
+
+
+        function visModal(produkt) {
+
+            let modal = document.querySelector("#modal");
+
+            modal.classList.add("vis");
+
+            console.log(produkt)
+
+            modal.querySelector(".modal-varenummer").textContent = "Varenummer: " + produkt.acf.varenummer;
+
+            modal.querySelector(".modal-titel").textContent = "Produktnavn: " + produkt.title.rendered;;
+
+            modal.querySelector(".modal-pris").textContent = "Pris: " + produkt.acf.pris;
+
+            modal.querySelector(".modal-maal").textContent = "Mål: " + produkt.acf.maal;
+
+            modal.querySelector(".modal-vaegt").textContent = "Vægt: " + produkt.acf.vaegt;
+
+            modal.querySelector(".modal-detaljer").textContent = "Detaljer: " + produkt.acf.detaljer;
+
+            modal.querySelector(".modal-serie").textContent = "Serie: " + produkt.acf.serie;
+
+            modal.querySelector(".modal-kategori").textContent = "Kategori: " + produkt.acf.kategori;
+
+            modal.querySelector(".modal-underkategori").textContent = "Underkategori: " +  produkt.acf.underkategori;
+
+
+
+            modal.querySelector(".modal-billede").src = produkt.acf.billede;
+
+            modal.querySelector(".modal-billede").alt = "Foto af " + produkt.acf.titel;
+
+
+
+            modal.querySelector("button").addEventListener("click", skjulModal);
+
+            console.log(produkt);
+
+        }
+
+
+        function skjulModal() {
+
+            document.querySelector("#modal").classList.remove("vis");
+
+        }
+
+        document.addEventListener("DOMContentLoaded", getJson);
+    </script>
+</body>
+
+</html>
