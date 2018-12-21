@@ -346,7 +346,9 @@ body {
 
 }
 
-
+.lev-img {
+max-width: 70%;
+}
 
 .grid-1,
 .grid-1-lev {
