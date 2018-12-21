@@ -1,130 +1,135 @@
 <!DOCTYPE html>
 <html lang="DA">
+
 <head>
-     <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>MWIDE</title>
-     <link rel="stylesheet" href="styles.css">
-     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
-     </script>
-     <script>
-          $(function() {
-               $("#include_header").load("header.html");
-               $("#include_footer").load("footer.html");
-               $("#include_slideshow").load("slideshow.html");
-               $("#include_tilmelding").load("tilmelding.html");
-          });
-     </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MWIDE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+
+
+    </script>
+    <script>
+        $(function() {
+            $("#include_header").load("header.html");
+            $("#include_footer").load("footer.html");
+            $("#include_slideshow").load("slideshow.html");
+            $("#include_tilmelding").load("tilmelding.html");
+        });
+
+    </script>
 </head>
 
 <body>
 
-     <video autoplay loop id="vid-splash" muted>
+    <video autoplay loop id="vid-splash" muted>
   <source src="imgs/splash_video.mp4" type="video/mp4">
 </video>
 
-     <div class="overlay_tekst">
-          <h1 class="headline">
-               Mwide møbler
-          </h1>
-     </div>
+    <div class="overlay_tekst">
+        <h1 class="headline">
+            Mwide møbler
+        </h1>
+    </div>
 
 
-     <div id="include_header"></div>
+    <div id="include_header"></div>
 
-     <button onclick="topFunction()" id="topBut" title="Til toppen">Top</button>
+    <button onclick="topFunction()" id="topBut" title="Til toppen">Top</button>
 
-     <div class="grid-content-container">
-          <div class="grid-item-1">
-               <h1 id="omos">Hvem er vi?</h1>
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut .</p>
-          </div>
-          <br>
-          <div class="grid-item-2">
-               <img src="imgs/line_shot_1.png" alt="Line&Wilma">
-          </div>
+    <div class="grid-content-container">
+        <div class="grid-item-1">
+            <h1 id="omos">Hvem er vi?</h1>
+            <p>Mwide drives af parret Mikkel og Line. De laver møbler i metal og træ med et råt, industrielt design, og tilsammen kan de tegne, designe, producere og levere et møbel efter dine anvisninger. Til daglig kan du møde Line og Wilma i butikken på Herlev Hovedgade, imens Mikkel oftest befinder sig på værkstedet i Ballerup, hvor hjemmeproduktionen også finder sted. Parret laver unikke designs, og de elsker tanken om at følge et møbel helt til dørs og se det endelige resultat i dit hjem.</p>
+        </div>
+        <br>
+        <div class="grid-item-2">
+            <img src="imgs/line_shot_1.png" alt="Line&Wilma">
+        </div>
 
-          <div class="grid-item-3">
+        <div class="grid-item-3">
 
-               <img id="grid-3-bg" src="imgs/splash_03.png" alt="mikkel">
+            <img id="grid-3-bg" src="imgs/splash_03.png" alt="mikkel">
 
-               <h1>Hvordan kan vi hjælpe dig?</h1>
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris </p>
+            <h1>Hvordan kan vi hjælpe dig?</h1>
+            <p>Har du smag for den industrielle stil, så har du måske allerede forelsket dig i et af vores designs - men det ser ikke helt ud, som du gerne vil have det? Vi kan lave stort set alt!</p>
 
-               <button class="kontakt-but">Kontakt os</button>
-               <button class="udvalg-but">Se udvalg</button>
+            <button class="kontakt-but">Kontakt os</button>
+            <button class="udvalg-but">Se udvalg</button>
 
-          </div>
-          <div class="grid-item-4">
+        </div>
+        <div class="grid-item-4">
 
-               <h1 id="proc-h1">
-                    Processen
-               </h1>
-               <div class="grid-item-5">
+            <h1 id="proc-h1">
+                Processen
+            </h1>
+            <div class="grid-item-5">
 
-                    <img src="imgs/1x/process_ide-8.png" alt="ide">
+                <img src="imgs/1x/process_ide-8.png" alt="ide">
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud .
-                    </p>
-               </div>
-               <div class="grid-item-6">
-                    <img src="imgs/1x/process_tlf-8.png" alt="kontakt">
+                <p>Har du fået en brilliant idé til det perfekte TV-bord? Eller har du set et af vores produkter og tænkt, "hvis bare benene var lidt længere..."?
+                </p>
+            </div>
+            <div class="grid-item-6">
+                <img src="imgs/1x/process_tlf-8.png" alt="kontakt">
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud .
-                    </p>
-               </div>
-               <div class="grid-item-7">
+                <p>Kontakt os for at få en snak om dine ønsker. Vi gør hvad vi kan for at imødekomme dine idéer, og vi holder kontakt med dig i løbet af produktionen af dit unikke møbel.
+                </p>
+            </div>
+            <div class="grid-item-7">
 
-                    <img src="imgs/1x/process_stol-8.png" alt="produkt">
+                <img src="imgs/1x/process_stol-8.png" alt="produkt">
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud .
-                    </p>
-               </div>
-          </div>
+                <p>Du får besked, når dit unikke møbel er klar til at blive leveret - lige til hoveddøren. Levering er gratis for bestillinger over 1.000 kr!
+                </p>
+            </div>
+        </div>
 
-          <div class="grid-item-8">
-               <div class="item-8-1">
-                    <h1>Kreativitet. Kvalitet.</h1>
-                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+        <div class="grid-item-8">
+            <div class="item-8-1">
+                <h1>Kreativitet. Kvalitet.</h1>
+                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
 
-                    <button class="udvalg-but">Se Kataloget</button>
-               </div>
-               <div class="item-8-2">
-                    <div id="include_slideshow"></div>
+                <button class="udvalg-but">Se Kataloget</button>
+            </div>
+            <div class="item-8-2">
+                <div id="include_slideshow"></div>
 
-               </div>
-          </div>
+            </div>
+        </div>
 
-          <div class="grid-item-11">
-               <div class="grid-cont-11-1">
-                    <div id="include_tilmelding"></div>
-               </div>
-          </div>
-     </div>
+        <div class="grid-item-11">
+            <div class="grid-cont-11-1">
+                <div id="include_tilmelding"></div>
+            </div>
+        </div>
+    </div>
 
 
-     <div id="include_footer"></div>
-     <script>
-          window.onscroll = function() {
-               scrollFunction()
-          };
+    <div id="include_footer"></div>
+    <script>
+        window.onscroll = function() {
+            scrollFunction()
+        };
 
-          function scrollFunction() {
-               if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                    document.getElementById("topBut").style.display = "block";
-               } else {
-                    document.getElementById("topBut").style.display = "none";
-               }
-          }
+        function scrollFunction() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                document.getElementById("topBut").style.display = "block";
+            } else {
+                document.getElementById("topBut").style.display = "none";
+            }
+        }
 
-          function topFunction() {
-               document.body.scrollTop = 0;
-               document.documentElement.scrollTop = 0; //
-          }
-     </script>
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0; //
+        }
+
+    </script>
 </body>
 
 </html>
